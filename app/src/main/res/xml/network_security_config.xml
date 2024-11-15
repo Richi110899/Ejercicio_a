@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Configuración base que prohíbe el tráfico claro (HTTP no cifrado) en toda la aplicación -->
+  <base-config cleartextTrafficPermitted="false"/>
+
+  <!-- Excepción para el dominio específico "192.168.18.21" que permite tráfico HTTP no cifrado -->
+  <domain-config cleartextTrafficPermitted="true">
+    <!-- Permite subdominios del dominio especificado -->
+    <domain includeSubdomains="true">dummyjson.com</domain>
+  </domain-config>
+</network-security-config>
